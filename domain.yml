@@ -1,0 +1,58 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- covid
+- covid_spreading
+- covid_stop
+- covid_symptoms
+- weather
+- city
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_meaning:
+  - text: Coronavirus disease (COVID-19) is an infectious disease caused by a newly
+      discovered coronavirus. Most people infected with the COVID-19 virus will experience
+      mild to moderate respiratory illness and recover without requiring special treatment.
+  utter_spread:
+  - text: To the best of our understanding, the virus is primarily spread through
+      contact and respiratory droplets. Under some circumstances airborne transmission
+      may occur (such as when aerosol generating procedures are conducted in health
+      care settings or potentially, in indoor crowded poorly ventilated settings elsewhere).
+  utter_stop:
+  - text: Self-care; If you feel sick you should rest, drink plenty of fluid, and
+      eat nutritious food. Stay in a separate room from other family members, and
+      use a dedicated bathroom if possible. Clean and disinfect frequently touched
+      surfaces. And, Medical Treatment; If you have mild symptoms and are otherwise
+      healthy, self-isolate and contact your medical provider or a COVID-19 information
+      line for advice.
+  utter_symptoms:
+  - text: Common; fever, dry cough and, tiredness. Less common; aches and pains, sore
+      throat, diarrhoea and, conjunctivitis. Serious; difficulty breathing or shortness
+      of breath, chest pain or pressure and, loss of speech or movement.
+  utter_temp:
+  - text: The temperature is {temp}
+  utter_city:
+  - text: what is city name?
+actions:
+- utter_temp
+- action_weather
