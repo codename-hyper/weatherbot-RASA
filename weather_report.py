@@ -3,7 +3,8 @@ import requests
 
 def weather(city_name):
     city = city_name
-    url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apikey}'
+    apikey = ''
+    url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apikey}
     weather_data = requests.get(url).json()
     weather_main = weather_data['main']
     return weather_main
